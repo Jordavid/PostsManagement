@@ -3,12 +3,12 @@
 @section('content')
 
     <h1 class="title">{{ $project->title }}</h1>
-    <p>
-        <a href="/projects/{{$project->id}}/edit" class="button">Edit Project</a>
-    </p>
 
-    <div>
-        <pre>{{$project->description}}</pre>
+    <div class="content">
+        {{$project->description}}'
+        <p>
+            <a href="/projects/{{$project->id}}/edit" class="button">Edit Project</a>
+        </p>
     </div>
 
     @if ($project->tasks->count())

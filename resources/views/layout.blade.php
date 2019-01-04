@@ -12,20 +12,65 @@
 
             text-decoration: line-through;
         }
+    html{
+        background: cadetblue;
+    }
+
+    body{
+        color: beige;
+    }
+    a {
+        color: brown;
+        font-size: 20px;
+    }
+
+    .title {
+        color: yellowgreen;
+    }
+
+    .content, label{
+        color: yellowgreen;
+    }
+
+    .navbar{
+        background: darkcyan;
+    }
     </style>
 </head>
 <body>
-    <div class="container">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/tasks">Tasks</a></li>
-            <li><a href="/contact">Contact us</a></li>
-            <li><a href="/about">About us</a></li>
-            <li><a href="/projects">Projects</a></li>
-        </ul>
-
-
-        @yield('content')
+    <div class="global">
+    <div class="container is-fluid">
+        
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="{{ asset('img/favicon.ico') }}" width="30" height="28">
+            </a>
+        
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+            </div>
+        
+            <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/"> Home </a>
+                <a class="navbar-item" href="/projects">Projects</a>
+                <a class="navbar-item" href="/tasks">Tasks</a>
+                <a class="navbar-item" href="/contact">Contact Us</a>
+                <a class="navbar-item" href="/about">About Us</a>
+                
+            </div>
+            </div>
+        </nav>
+    
+      <hr>
+      
+            @yield('content')
+      </div>
+        
 
     </div>
 </body>

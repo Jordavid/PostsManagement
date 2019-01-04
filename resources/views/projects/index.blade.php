@@ -3,7 +3,7 @@
 @section('title', 'Projects')
 
 @section('content')
-<hr>
+
     <a href="/projects/create">Create new project</a>
     <hr>
     <h1 class="title">All the projects</h1>
@@ -20,4 +20,5 @@
         </li>
         @endforeach
     </ol>
+    
 @endsection
