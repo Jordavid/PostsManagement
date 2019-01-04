@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1 class="title">Taks</h1>
+    <h1 class="title"> Tasks </h1>
     <ul>
      @foreach ($tasks as $task)
     
