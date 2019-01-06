@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Filesystem\Filesystem;
 use App\Project;
+use App\Facebook;
 
 class ProjectsController extends Controller
 {
@@ -37,7 +38,11 @@ class ProjectsController extends Controller
         return redirect('/projects');
     }
     
-    public function show(Project $project){
+    public function show(Project $project, Facebook $facebook)
+    {
+
+       /*  dd($facebook);
+        dd(app('facebook')); */
 
         return view('projects.show', compact('project'));
         

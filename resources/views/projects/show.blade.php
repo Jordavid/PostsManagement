@@ -21,10 +21,13 @@
 
                 <div>
 
-                    <form action="/tasks/{{ $task->id }}" method="POST">
-                        
+                    <form action="/completed_tasks/{{ $task->id }}" method="POST">
 
-                        @method('PATCH')
+                        @if ($task->completed)
+
+                            @method('DELETE')
+                        
+                        @endif
 
                         @csrf
 

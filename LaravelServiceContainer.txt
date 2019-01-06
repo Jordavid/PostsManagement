@@ -1,0 +1,17 @@
+Service container and Auto-Resolution
+- Route Model Binding RMB -> get access to a class and all its components.
+Laravel uses 2 concepts to accomplish the RMB
+- Auto Resolver -> Assume that we need an instance of a Specific Class and check in 
+the Service Container if that class exist, if yes, it gives you an instance of the class
+- Service Container -> Can be considered as a Big Block of Key-Value Pair
+
+To register a new Block in the container:
+
+app()->bind('example', function(){
+	
+	return new ClassName;
+});
+
+And Call it in the Controller or Anywhere:
+
+dd(app('example'));
