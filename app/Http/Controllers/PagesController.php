@@ -10,7 +10,7 @@ class PagesController extends Controller
 {
     public function home(){
 
-        $users = User::all();
+        $users = User::where('id', auth()->id())->get();
 
         // return $users;
         

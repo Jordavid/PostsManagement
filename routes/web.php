@@ -24,14 +24,14 @@ use App\Facebook;
     return new App\Facebook('This is my Faebook Api Key');
  });
  */
-Route::get('/home', function(Facebook $facebook){
+/* Route::get('/home', function(Facebook $facebook){
 
     dd($facebook);
 
     // dd(app('App\Example'));
 
     return view('welcome');
-});
+}); */
 
 Route::get('/', 'PagesController@home');
 
@@ -52,3 +52,6 @@ Route::delete('/completed_tasks/{task}', 'CompletedTasksController@destroy');
 /* To check all the routes: php artisan route:list 
     Create a ressource route: php artisan make:ressource <res name>
 */
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
